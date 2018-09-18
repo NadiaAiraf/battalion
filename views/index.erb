@@ -1,0 +1,9 @@
+<% if @name  %>
+  <h2><%= @name %></h2>
+<% else %>
+  <h2>Hello battle!</h2>
+<% end %>
+<form action="/">
+  <input type="text" name="name" id="name">
+  <input type="submit" value="Submit">
+</form>
