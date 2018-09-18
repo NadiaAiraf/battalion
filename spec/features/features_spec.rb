@@ -23,5 +23,14 @@ describe Battle do
       end
     end
   end
+  feature 'attacking' do
+    it 'allows player1 to attack player2' do
+      sign_in_and_play
+      click_button('Attack')
+      within ('div.attack_message') do
+        expect(page).to have_content('You have attacked the enemy')
+      end
+    end
+  end
 
 end

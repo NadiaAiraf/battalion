@@ -1,3 +1,13 @@
 <h1><%= session[:player1].upcase %> VS. <%= session[:player2].upcase %>!!!</h1>
-<div id="player2_hitpoint"><%= session[:player2] %>'s hitpoints: <%= @player2_hitpoint %> HP</div>
-
+<div id="player2_hitpoint">
+  <%= session[:player2] %>'s hitpoints: <%= @player2_hitpoint %> HP
+</div>
+<br>
+<form action="/play" method="post">
+<%# <button name="message">Attack</button> %>
+<input type="submit" value="Attack">
+</form>
+<br>
+<% if session[:attack_message] %>
+<div class="attack_message">You have attacked the enemy</div>
+<% end %>

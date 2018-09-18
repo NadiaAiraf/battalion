@@ -13,6 +13,11 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  post '/play' do
+    session[:attack_message] = true
+    redirect '/play'
+  end
+
   get '/play' do
     @player2_hitpoint = 100
     @player1 = session[:player1]
