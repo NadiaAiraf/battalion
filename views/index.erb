@@ -1,9 +1,7 @@
-<% if @name  %>
-  <h2><%= @name %></h2>
-<% else %>
-  <h2>Hello battle!</h2>
-<% end %>
-<form action="/">
-  <input type="text" name="name" id="name">
+<h2>Hello battle!</h2>
+
+<form method="post" action="/names">
+  <input type="text" name="player1" placeholder="Player 1">
+  <input type="text" name="player2" placeholder="Player 2">
   <input type="submit" value="Submit">
 </form>

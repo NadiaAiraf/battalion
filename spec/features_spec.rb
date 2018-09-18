@@ -13,9 +13,10 @@ describe Battle do
 
   feature 'players enter their details in form' do
     it "fills in information" do
-      fill_in 'name', with: 'Player One'
+      fill_in 'player1', with: 'Player One'
+      fill_in 'player2', with: 'Player Two'
       click_button('Submit')
-      expect(page).to have_content('Player One')
+      expect(page).to have_content('Hello, Player One and Player Two')
     end
   end
 end
