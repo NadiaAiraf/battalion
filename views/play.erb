@@ -1,13 +1,28 @@
-<h1><%= session[:player1].upcase %> VS. <%= session[:player2].upcase %>!!!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><%= session[:player1].upcase %> VS. <%= session[:player2].upcase %>!!!</h1>
 <div id="player2_hitpoint">
   <%= session[:player2] %>'s hitpoints: <%= @player2_hitpoint %> HP
 </div>
 <br>
 <form action="/play" method="post">
-<%# <button name="message">Attack</button> %>
-<input type="submit" value="Attack">
+  <%# <button name="message">Attack</button> %>
+<span>Use Move:</span>
+<input type="submit" value="Tax Editor">
 </form>
 <br>
 <% if session[:attack_message] %>
-<div class="attack_message">You have attacked the enemy</div>
+  <img class="pikaPhoto" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fpm1.narvii.com%2F6194%2F747772169a1505742e9cb218b0726fcf2d6e9673_hq.jpg&f=1">
+  <div class="attack_message">You have attacked the enemy</div>
 <% end %>
+</body>
+</html>
+
