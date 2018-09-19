@@ -14,7 +14,7 @@ describe Battle do
       expect(page).to have_content('PLAYER ONE VS. PLAYER TWO!!!')
     end
   end
-  
+
   feature 'player one checks player two\'s HP' do
     it "allows P1 to check HP" do
       sign_in_and_play
@@ -26,7 +26,7 @@ describe Battle do
   feature 'attacking' do
     it 'allows player1 to attack player2' do
       sign_in_and_play
-      click_button('Attack')
+      click_button('Tax editor')
       within ('div.attack_message') do
         expect(page).to have_content('You have attacked the enemy')
       end
