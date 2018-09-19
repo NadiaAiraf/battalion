@@ -11,7 +11,7 @@
 <body>
   <h1><%= $player1.name.upcase %> VS. <%= $player2.name.upcase %>!!!</h1>
 <div id="player2_hitpoint">
-  <%= $player2.name %>'s hitpoints: <%= @player2_hitpoint %> HP
+  <%= $player2.name %>'s hitpoints: <%= $player2.hitpoints %> HP
 </div>
 <br>
 <form action="/play" method="post">

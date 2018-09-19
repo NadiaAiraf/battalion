@@ -23,14 +23,21 @@ describe Battle do
       # end
     end
   end
+
   feature 'attacking' do
     it 'allows player1 to attack player2' do
       sign_in_and_play
       click_button('Tax editor')
-      # within ('div.attack_message') do
+      within ('div.attack_message') do
         expect(page).to have_content('You have attacked the enemy')
-      # end
+      end
+    end
+
+    scenario 'reduces my opponenets HP by 10' do
+      sign_in_and_play
+      click_button('Tax editor')
+      expect(page).not_to have_content("Player Two's hitpoints: 100")
+      expect(page).to have_content("Player Two's hitpoints: 90")
     end
   end
-
 end

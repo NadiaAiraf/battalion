@@ -20,7 +20,6 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @player2_hitpoint = 100
     erb :play
   end
 
