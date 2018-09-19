@@ -16,6 +16,7 @@ class Battle < Sinatra::Base
 
   post '/play' do
     session[:attack_message] = true
+    $player1.attack($player2)
     redirect '/play'
   end
 
