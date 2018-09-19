@@ -7,10 +7,11 @@
   <title>Document</title>
   <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-  <h1><%= session[:player1].upcase %> VS. <%= session[:player2].upcase %>!!!</h1>
+  <h1><%= $player1.name.upcase %> VS. <%= $player2.name.upcase %>!!!</h1>
 <div id="player2_hitpoint">
-  <%= session[:player2] %>'s hitpoints: <%= @player2_hitpoint %> HP
+  <%= $player2.name %>'s hitpoints: <%= @player2_hitpoint %> HP
 </div>
 <br>
 <form action="/play" method="post">
